@@ -49,9 +49,7 @@ public extension Decoded {
   func apply<U>(_ f: Decoded<(T) -> U>) -> Decoded<U> {
     switch (f, self) {
     case let (.success(function), _): return self.map(function)
-    case let (.failure(.multiple(es)), .failure(e)): return .failure(.multiple(es + [e]))
-    case let (.failure(e), .failure(.multiple(es))): return .failure(.multiple([e] + es))
-    case let (.failure(le), .failure(re)): return .failure(.multiple([le, re]))
+    case let (.failure(le), .failure(re)): return .failure(le + re)
     case let (.failure(f), _): return .failure(f)
     }
   }

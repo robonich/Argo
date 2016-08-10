@@ -57,3 +57,11 @@ public func == (lhs: DecodeError, rhs: DecodeError) -> Bool {
     return false
   }
 }
+
+public func + (lhs: DecodeError, rhs: DecodeError) -> DecodeError {
+  switch (lhs, rhs) {
+  case let (.multiple(es), e): return .multiple(es + [e])
+  case let (e, .multiple(es)): return .multiple([e] + es)
+  case let (le, re): return .multiple([le, re])
+  }
+}
