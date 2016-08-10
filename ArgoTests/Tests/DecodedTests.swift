@@ -63,7 +63,6 @@ class DecodedTests: XCTestCase {
       .typeMismatch(expected: "Int", actual: "String(1)"),
       .missingKey("name")
     ]
-    print(expected)
 
     switch user {
     case let .failure(.multiple(errors)): XCTAssert(errors == expected)
