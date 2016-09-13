@@ -57,7 +57,9 @@ class DecodedTests: XCTestCase {
   }
 
   func testDecodedMultipleErrors() {
-    let user: Decoded<User> = decode(json(fromFile: "user_with_bad_type_and_missing_key")!)
+    let user: Decoded<User> = decode([
+      "id": "1"
+    ])
 
     let expected: [DecodeError] = [
       .typeMismatch(expected: "Int", actual: "String(1)"),
@@ -66,6 +68,27 @@ class DecodedTests: XCTestCase {
 
     switch user {
     case let .failure(.multiple(errors)): XCTAssert(errors == expected)
+    default: XCTFail("Unexpected Case Occurred")
+    }
+  }
+
+  func testDecodedMultipleErrorsWithOptionalKeyTypeMismatch() {
+    let user: Decoded<User> = decode([
+      "id": 1,
+      "email": 1
+    ])
+
+    let expected: [DecodeError] = [
+      .missingKey("name"),
+      .typeMismatch(expected: "String", actual: String(describing: JSON.number(1)))
+    ]
+
+    switch user {
+    case let .failure(.multiple(errors)):
+      print("expected: \(expected)")
+      print("actual: \(errors)")
+
+      XCTAssert(errors == expected)
     default: XCTFail("Unexpected Case Occurred")
     }
   }

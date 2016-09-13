@@ -58,9 +58,6 @@
 		809755081BADF3ED00C409E6 /* user_with_bad_type.json in Resources */ = {isa = PBXBuildFile; fileRef = EA47BB551AFC5DAC002D2CCD /* user_with_bad_type.json */; };
 		809755091BADF3ED00C409E6 /* user_without_key.json in Resources */ = {isa = PBXBuildFile; fileRef = EA47BB581AFC5E65002D2CCD /* user_without_key.json */; };
 		8097550A1BADF3F200C409E6 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = EABDF68E1A9CD4EA00B6CC83 /* types.plist */; };
-		A18467601D33262400CAA73E /* user_with_bad_type_and_missing_key.json in Resources */ = {isa = PBXBuildFile; fileRef = A184675F1D33262400CAA73E /* user_with_bad_type_and_missing_key.json */; };
-		A18467611D33262400CAA73E /* user_with_bad_type_and_missing_key.json in Resources */ = {isa = PBXBuildFile; fileRef = A184675F1D33262400CAA73E /* user_with_bad_type_and_missing_key.json */; };
-		A18467621D33262400CAA73E /* user_with_bad_type_and_missing_key.json in Resources */ = {isa = PBXBuildFile; fileRef = A184675F1D33262400CAA73E /* user_with_bad_type_and_missing_key.json */; };
 		BF92789D1B9365900038A7E1 /* RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF92789C1B9365900038A7E1 /* RawRepresentable.swift */; };
 		D0592EBE1B77DD8E00EFEF39 /* Decoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EB69E1ABC5F1300E3B0AB /* Decoded.swift */; };
 		D0592EBF1B77DD8E00EFEF39 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EB69F1ABC5F1300E3B0AB /* JSON.swift */; };
@@ -280,7 +277,6 @@
 		4D5F6DD81B3832C200D79B25 /* user_with_nested_name.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_with_nested_name.json; sourceTree = "<group>"; };
 		809754C11BADF34100C409E6 /* Argo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Argo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		809754CA1BADF34200C409E6 /* Argo-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Argo-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A184675F1D33262400CAA73E /* user_with_bad_type_and_missing_key.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_with_bad_type_and_missing_key.json; sourceTree = "<group>"; };
 		BF92789C1B9365900038A7E1 /* RawRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RawRepresentable.swift; path = Argo/Extensions/RawRepresentable.swift; sourceTree = SOURCE_ROOT; };
 		D0592EB61B77DD7800EFEF39 /* Argo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Argo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA04D5901BBF1F40001DE23B /* Monad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monad.swift; sourceTree = "<group>"; };
@@ -550,9 +546,8 @@
 				EA395DC31A52F8EB00EB607E /* array_root.json */,
 				EA395DC91A52FC1400EB607E /* root_object.json */,
 				EA6DD69E1AB384C700CA3A5B /* big_data.json */,
-				EA47BB551AFC5DAC002D2CCD /* user_with_bad_type.json */,
 				EA47BB581AFC5E65002D2CCD /* user_without_key.json */,
-				A184675F1D33262400CAA73E /* user_with_bad_type_and_missing_key.json */,
+				EA47BB551AFC5DAC002D2CCD /* user_with_bad_type.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -874,7 +869,6 @@
 				809754F91BADF3ED00C409E6 /* user_with_email.json in Resources */,
 				8097550A1BADF3F200C409E6 /* types.plist in Resources */,
 				809755041BADF3ED00C409E6 /* types_fail_embedded.json in Resources */,
-				A18467621D33262400CAA73E /* user_with_bad_type_and_missing_key.json in Resources */,
 				809755051BADF3ED00C409E6 /* array_root.json in Resources */,
 				809754FC1BADF3ED00C409E6 /* url.json in Resources */,
 				809755091BADF3ED00C409E6 /* user_without_key.json in Resources */,
@@ -915,7 +909,6 @@
 				EAD9FB0619D2143A0031E006 /* user_with_email.json in Resources */,
 				EAD9FB0B19D214AA0031E006 /* TemplateIcon2x.png in Resources */,
 				EA47BB591AFC5E65002D2CCD /* user_without_key.json in Resources */,
-				A18467601D33262400CAA73E /* user_with_bad_type_and_missing_key.json in Resources */,
 				EA395DC41A52F8EB00EB607E /* array_root.json in Resources */,
 				F8E33FA51A51E0C20025A6E5 /* post_bad_comments.json in Resources */,
 				EAD9FB1419D30ED00031E006 /* comment.json in Resources */,
@@ -949,7 +942,6 @@
 				F8EF756D1A4CEC7100BDCC2D /* user_with_email.json in Resources */,
 				F8EF756F1A4CEC7100BDCC2D /* TemplateIcon2x.png in Resources */,
 				EA47BB5A1AFC5E65002D2CCD /* user_without_key.json in Resources */,
-				A18467611D33262400CAA73E /* user_with_bad_type_and_missing_key.json in Resources */,
 				EA395DC51A52F8EE00EB607E /* array_root.json in Resources */,
 				EA395DC21A5209C000EB607E /* post_bad_comments.json in Resources */,
 				F8EF75701A4CEC7100BDCC2D /* comment.json in Resources */,
