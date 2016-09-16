@@ -19,4 +19,13 @@ final class EmbeddedDecodingTests: XCTestCase {
     case .none: XCTFail("Unexpected Success")
     }
   }
+
+  func testFailOnMultipleEmbeddedFailures() {
+    let post: Decoded<LocationPost> = decode(json(fromFile: "double_bad_location_post")!)
+
+    switch post.error {
+    case .some: XCTAssert(true)
+    case .none: XCTFail("Unexpected Success")
+    }
+  }
 }
