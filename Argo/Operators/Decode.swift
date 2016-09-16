@@ -51,7 +51,20 @@ public func <|? <A: Decodable>(json: JSON, key: String) -> Decoded<A?> where A =
              decode operation
 */
 public func <| <A: Decodable>(json: JSON, keys: [String]) -> Decoded<A> where A == A.DecodedType {
-  return flatReduce(keys, initial: json, combine: decodedJSON) >>- A.decode
+  return flatReduce(keys, initial: json, combine: decodedJSON) >>- guardMissingKey
+}
+
+func guardMissingKey<A: Decodable>(_ json: JSON) -> Decoded<A> where A == A.DecodedType {
+  switch A.decode(json) {
+  case .success(let x): return .success(x)
+  case .failure(let e):
+    switch e {
+    case .missingKey:
+      // This is actually a typeMismatch error because the embedded type could not be decoded
+      return .failure(.typeMismatch(expected: String(describing: A.self), actual: String(describing: json)))
+    default: return .failure(e)
+    }
+  }
 }
 
 /**
