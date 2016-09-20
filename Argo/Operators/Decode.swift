@@ -33,7 +33,7 @@ public func <| <A: Decodable>(json: JSON, key: String) -> Decoded<A> where A == 
              the decode operation
 */
 public func <|? <A: Decodable>(json: JSON, key: String) -> Decoded<A?> where A == A.DecodedType {
-  return .optional(json <| [key])
+  return json <|? [key]
 }
 
 /**
@@ -51,20 +51,7 @@ public func <|? <A: Decodable>(json: JSON, key: String) -> Decoded<A?> where A =
              decode operation
 */
 public func <| <A: Decodable>(json: JSON, keys: [String]) -> Decoded<A> where A == A.DecodedType {
-  return flatReduce(keys, initial: json, combine: decodedJSON) >>- guardMissingKey
-}
-
-func guardMissingKey<A: Decodable>(_ json: JSON) -> Decoded<A> where A == A.DecodedType {
-  switch A.decode(json) {
-  case .success(let x): return .success(x)
-  case .failure(let e):
-    switch e {
-    case .missingKey:
-      // This is actually a typeMismatch error because the embedded type could not be decoded
-      return .failure(.typeMismatch(expected: String(describing: A.self), actual: String(describing: json)))
-    default: return .failure(e)
-    }
-  }
+  return flatReduce(keys, initial: json, combine: decodedJSON) >>- A.decode
 }
 
 /**
@@ -84,7 +71,10 @@ func guardMissingKey<A: Decodable>(_ json: JSON) -> Decoded<A> where A == A.Deco
              the decode operation
 */
 public func <|? <A: Decodable>(json: JSON, keys: [String]) -> Decoded<A?> where A == A.DecodedType {
-  return .optional(json <| keys)
+  switch flatReduce(keys, initial: json, combine: decodedJSON) {
+  case .failure: return .success(.none)
+  case .success(let x): return A.decode(x) >>- { .success(.some($0)) }
+  }
 }
 
 /**
@@ -121,7 +111,7 @@ public func <|| <A: Decodable>(json: JSON, key: String) -> Decoded<[A]> where A 
              failure of the decode operation
 */
 public func <||? <A: Decodable>(json: JSON, key: String) -> Decoded<[A]?> where A == A.DecodedType {
-  return .optional(json <|| [key])
+  return json <||? [key]
 }
 
 /**
@@ -161,5 +151,8 @@ public func <|| <A: Decodable>(json: JSON, keys: [String]) -> Decoded<[A]> where
              failure of the decode operation
 */
 public func <||? <A: Decodable>(json: JSON, keys: [String]) -> Decoded<[A]?> where A == A.DecodedType {
-  return .optional(json <|| keys)
+  switch flatReduce(keys, initial: json, combine: decodedJSON) {
+  case .failure: return .success(.none)
+  case .success(let value): return Array<A>.decode(value) >>- { .success(.some($0)) }
+  }
 }
