@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 46;
+    rootObject = __RootObject_;
+    objects = {
+        __RootObject_ = {
+            isa = PBXProject;
+            attributes = {LastUpgradeCheck = 9999;};
+            buildConfigurationList = ___RootConfs_;
+            compatibilityVersion = 'Xcode 3.2';
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (en);
+            mainGroup = ___RootGroup_;
+            productRefGroup = ____Products_;
+            projectDirPath = '';
+            projectRoot = '';
+            targets = (______Target_Runes, ______Target_Curry, ______Target_Argo, ______Target_ArgoTests);
+        };
+        '__PBXFileRef_Package.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Package.swift';
+            sourceTree = '<group>';
+        };
+        ___RootGroup_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_Package.swift', _____Configs_, _____Sources_,  Dependencies_, _______Tests_, ____Products_);
+            sourceTree = '<group>';
+        };
+        _______Group_Runes = {
+            isa = PBXGroup;
+            name = 'Runes';
+            path = 'Packages/Runes-3.2.2/Sources';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Packages/Runes-3.2.2/Sources/Array.swift', '__PBXFileRef_Packages/Runes-3.2.2/Sources/Optional.swift', '__PBXFileRef_Packages/Runes-3.2.2/Sources/Runes.swift');
+        };
+        '__PBXFileRef_Packages/Runes-3.2.2/Sources/Array.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Array.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/Runes-3.2.2/Sources/Optional.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Optional.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/Runes-3.2.2/Sources/Runes.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Runes.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_Runes = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_Runes;
+            buildPhases = (CompilePhase_Runes, ___LinkPhase_Runes);
+            buildRules = ();
+            dependencies = ();
+            name = 'Runes';
+            productName = Runes;
+            productReference = _____Product_Runes;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_Runes = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'Runes.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_Runes = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Packages/Runes-3.2.2/Sources/Array.swift', '__src_cc_ref_Packages/Runes-3.2.2/Sources/Optional.swift', '__src_cc_ref_Packages/Runes-3.2.2/Sources/Runes.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Packages/Runes-3.2.2/Sources/Array.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/Runes-3.2.2/Sources/Array.swift';
+        };
+        '__src_cc_ref_Packages/Runes-3.2.2/Sources/Optional.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/Runes-3.2.2/Sources/Optional.swift';
+        };
+        '__src_cc_ref_Packages/Runes-3.2.2/Sources/Runes.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/Runes-3.2.2/Sources/Runes.swift';
+        };
+        ___LinkPhase_Runes = {
+            isa = PBXFrameworksBuildPhase;
+            files = ();
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _______Confs_Runes = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_Runes, _ReleaseConf_Runes);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_Runes = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Argo.xcodeproj/Runes_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; PRODUCT_BUNDLE_IDENTIFIER = 'Runes'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Debug;
+        };
+        _ReleaseConf_Runes = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Argo.xcodeproj/Runes_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; PRODUCT_BUNDLE_IDENTIFIER = 'Runes'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Release;
+        };
+        __Dependency_Runes = {
+            isa = PBXTargetDependency;
+            target = ______Target_Runes;
+        };
+        _______Group_Curry = {
+            isa = PBXGroup;
+            name = 'Curry';
+            path = 'Packages/Curry-2.3.4/Source';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Packages/Curry-2.3.4/Source/Curry.swift');
+        };
+        '__PBXFileRef_Packages/Curry-2.3.4/Source/Curry.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Curry.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_Curry = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_Curry;
+            buildPhases = (CompilePhase_Curry, ___LinkPhase_Curry);
+            buildRules = ();
+            dependencies = ();
+            name = 'Curry';
+            productName = Curry;
+            productReference = _____Product_Curry;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_Curry = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'Curry.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_Curry = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Packages/Curry-2.3.4/Source/Curry.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Packages/Curry-2.3.4/Source/Curry.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/Curry-2.3.4/Source/Curry.swift';
+        };
+        ___LinkPhase_Curry = {
+            isa = PBXFrameworksBuildPhase;
+            files = ();
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _______Confs_Curry = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_Curry, _ReleaseConf_Curry);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_Curry = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Argo.xcodeproj/Curry_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; PRODUCT_BUNDLE_IDENTIFIER = 'Curry'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Debug;
+        };
+        _ReleaseConf_Curry = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Argo.xcodeproj/Curry_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; PRODUCT_BUNDLE_IDENTIFIER = 'Curry'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Release;
+        };
+        __Dependency_Curry = {
+            isa = PBXTargetDependency;
+            target = ______Target_Curry;
+        };
+        _______Group_Argo = {
+            isa = PBXGroup;
+            name = 'Argo';
+            path = 'Sources/Argo';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Sources/Argo/Extensions/Dictionary.swift', '__PBXFileRef_Sources/Argo/Extensions/NSNumber.swift', '__PBXFileRef_Sources/Argo/Extensions/RawRepresentable.swift', '__PBXFileRef_Sources/Argo/Functions/catDecoded.swift', '__PBXFileRef_Sources/Argo/Functions/decode.swift', '__PBXFileRef_Sources/Argo/Functions/flatReduce.swift', '__PBXFileRef_Sources/Argo/Functions/sequence.swift', '__PBXFileRef_Sources/Argo/Operators/Argo.swift', '__PBXFileRef_Sources/Argo/Operators/Decode.swift', '__PBXFileRef_Sources/Argo/Types/Decodable.swift', '__PBXFileRef_Sources/Argo/Types/DecodeError.swift', '__PBXFileRef_Sources/Argo/Types/JSON.swift', '__PBXFileRef_Sources/Argo/Types/StandardTypes.swift', '__PBXFileRef_Sources/Argo/Types/Decoded/Alternative.swift', '__PBXFileRef_Sources/Argo/Types/Decoded/Applicative.swift', '__PBXFileRef_Sources/Argo/Types/Decoded/Decoded.swift', '__PBXFileRef_Sources/Argo/Types/Decoded/FailureCoalescing.swift', '__PBXFileRef_Sources/Argo/Types/Decoded/Functor.swift', '__PBXFileRef_Sources/Argo/Types/Decoded/Monad.swift');
+        };
+        '__PBXFileRef_Sources/Argo/Extensions/Dictionary.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Extensions/Dictionary.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Extensions/NSNumber.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Extensions/NSNumber.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Extensions/RawRepresentable.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Extensions/RawRepresentable.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Functions/catDecoded.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Functions/catDecoded.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Functions/decode.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Functions/decode.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Functions/flatReduce.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Functions/flatReduce.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Functions/sequence.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Functions/sequence.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Operators/Argo.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Operators/Argo.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Operators/Decode.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Operators/Decode.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Types/Decodable.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Types/Decodable.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Types/DecodeError.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Types/DecodeError.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Types/JSON.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Types/JSON.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Types/StandardTypes.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Types/StandardTypes.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Types/Decoded/Alternative.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Types/Decoded/Alternative.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Types/Decoded/Applicative.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Types/Decoded/Applicative.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Types/Decoded/Decoded.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Types/Decoded/Decoded.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Types/Decoded/FailureCoalescing.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Types/Decoded/FailureCoalescing.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Types/Decoded/Functor.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Types/Decoded/Functor.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/Argo/Types/Decoded/Monad.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Types/Decoded/Monad.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_Argo = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_Argo;
+            buildPhases = (CompilePhase_Argo, ___LinkPhase_Argo);
+            buildRules = ();
+            dependencies = (__Dependency_Runes, __Dependency_Curry);
+            name = 'Argo';
+            productName = Argo;
+            productReference = _____Product_Argo;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_Argo = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'Argo.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_Argo = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Sources/Argo/Extensions/Dictionary.swift', '__src_cc_ref_Sources/Argo/Extensions/NSNumber.swift', '__src_cc_ref_Sources/Argo/Extensions/RawRepresentable.swift', '__src_cc_ref_Sources/Argo/Functions/catDecoded.swift', '__src_cc_ref_Sources/Argo/Functions/decode.swift', '__src_cc_ref_Sources/Argo/Functions/flatReduce.swift', '__src_cc_ref_Sources/Argo/Functions/sequence.swift', '__src_cc_ref_Sources/Argo/Operators/Argo.swift', '__src_cc_ref_Sources/Argo/Operators/Decode.swift', '__src_cc_ref_Sources/Argo/Types/Decodable.swift', '__src_cc_ref_Sources/Argo/Types/DecodeError.swift', '__src_cc_ref_Sources/Argo/Types/JSON.swift', '__src_cc_ref_Sources/Argo/Types/StandardTypes.swift', '__src_cc_ref_Sources/Argo/Types/Decoded/Alternative.swift', '__src_cc_ref_Sources/Argo/Types/Decoded/Applicative.swift', '__src_cc_ref_Sources/Argo/Types/Decoded/Decoded.swift', '__src_cc_ref_Sources/Argo/Types/Decoded/FailureCoalescing.swift', '__src_cc_ref_Sources/Argo/Types/Decoded/Functor.swift', '__src_cc_ref_Sources/Argo/Types/Decoded/Monad.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Sources/Argo/Extensions/Dictionary.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Extensions/Dictionary.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Extensions/NSNumber.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Extensions/NSNumber.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Extensions/RawRepresentable.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Extensions/RawRepresentable.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Functions/catDecoded.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Functions/catDecoded.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Functions/decode.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Functions/decode.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Functions/flatReduce.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Functions/flatReduce.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Functions/sequence.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Functions/sequence.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Operators/Argo.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Operators/Argo.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Operators/Decode.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Operators/Decode.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Types/Decodable.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Types/Decodable.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Types/DecodeError.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Types/DecodeError.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Types/JSON.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Types/JSON.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Types/StandardTypes.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Types/StandardTypes.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Types/Decoded/Alternative.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Types/Decoded/Alternative.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Types/Decoded/Applicative.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Types/Decoded/Applicative.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Types/Decoded/Decoded.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Types/Decoded/Decoded.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Types/Decoded/FailureCoalescing.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Types/Decoded/FailureCoalescing.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Types/Decoded/Functor.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Types/Decoded/Functor.swift';
+        };
+        '__src_cc_ref_Sources/Argo/Types/Decoded/Monad.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/Argo/Types/Decoded/Monad.swift';
+        };
+        ___LinkPhase_Argo = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_Runes_via_Argo, _LinkFileRef_Curry_via_Argo);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_Runes_via_Argo = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_Runes;
+        };
+        _LinkFileRef_Curry_via_Argo = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_Curry;
+        };
+        _______Confs_Argo = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_Argo, _ReleaseConf_Argo);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_Argo = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Argo.xcodeproj/Argo_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; PRODUCT_BUNDLE_IDENTIFIER = 'Argo'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Debug;
+        };
+        _ReleaseConf_Argo = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Argo.xcodeproj/Argo_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; PRODUCT_BUNDLE_IDENTIFIER = 'Argo'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Release;
+        };
+        __Dependency_Argo = {
+            isa = PBXTargetDependency;
+            target = ______Target_Argo;
+        };
+        _______Group_ArgoTests = {
+            isa = PBXGroup;
+            name = 'ArgoTests';
+            path = 'Tests/ArgoTests';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Tests/ArgoTests/JSON/JSONFileReader.swift', '__PBXFileRef_Tests/ArgoTests/Models/Booleans.swift', '__PBXFileRef_Tests/ArgoTests/Models/Comment.swift', '__PBXFileRef_Tests/ArgoTests/Models/Post.swift', '__PBXFileRef_Tests/ArgoTests/Models/TestModel.swift', '__PBXFileRef_Tests/ArgoTests/Models/URL.swift', '__PBXFileRef_Tests/ArgoTests/Models/User.swift', '__PBXFileRef_Tests/ArgoTests/plists/PListFileReader.swift');
+        };
+        '__PBXFileRef_Tests/ArgoTests/JSON/JSONFileReader.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'JSON/JSONFileReader.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Tests/ArgoTests/Models/Booleans.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Models/Booleans.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Tests/ArgoTests/Models/Comment.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Models/Comment.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Tests/ArgoTests/Models/Post.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Models/Post.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Tests/ArgoTests/Models/TestModel.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Models/TestModel.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Tests/ArgoTests/Models/URL.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Models/URL.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Tests/ArgoTests/Models/User.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Models/User.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Tests/ArgoTests/plists/PListFileReader.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'plists/PListFileReader.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_ArgoTests = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_ArgoTests;
+            buildPhases = (CompilePhase_ArgoTests, ___LinkPhase_ArgoTests);
+            buildRules = ();
+            dependencies = (__Dependency_Runes, __Dependency_Curry, __Dependency_Argo);
+            name = 'ArgoTests';
+            productName = ArgoTests;
+            productReference = _____Product_ArgoTests;
+            productType = 'com.apple.product-type.bundle.unit-test';
+        };
+        _____Product_ArgoTests = {
+            isa = PBXFileReference;
+            explicitFileType = 'compiled.mach-o.wrapper.cfbundle';
+            path = 'ArgoTests.xctest';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_ArgoTests = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Tests/ArgoTests/JSON/JSONFileReader.swift', '__src_cc_ref_Tests/ArgoTests/Models/Booleans.swift', '__src_cc_ref_Tests/ArgoTests/Models/Comment.swift', '__src_cc_ref_Tests/ArgoTests/Models/Post.swift', '__src_cc_ref_Tests/ArgoTests/Models/TestModel.swift', '__src_cc_ref_Tests/ArgoTests/Models/URL.swift', '__src_cc_ref_Tests/ArgoTests/Models/User.swift', '__src_cc_ref_Tests/ArgoTests/plists/PListFileReader.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Tests/ArgoTests/JSON/JSONFileReader.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/ArgoTests/JSON/JSONFileReader.swift';
+        };
+        '__src_cc_ref_Tests/ArgoTests/Models/Booleans.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/ArgoTests/Models/Booleans.swift';
+        };
+        '__src_cc_ref_Tests/ArgoTests/Models/Comment.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/ArgoTests/Models/Comment.swift';
+        };
+        '__src_cc_ref_Tests/ArgoTests/Models/Post.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/ArgoTests/Models/Post.swift';
+        };
+        '__src_cc_ref_Tests/ArgoTests/Models/TestModel.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/ArgoTests/Models/TestModel.swift';
+        };
+        '__src_cc_ref_Tests/ArgoTests/Models/URL.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/ArgoTests/Models/URL.swift';
+        };
+        '__src_cc_ref_Tests/ArgoTests/Models/User.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/ArgoTests/Models/User.swift';
+        };
+        '__src_cc_ref_Tests/ArgoTests/plists/PListFileReader.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/ArgoTests/plists/PListFileReader.swift';
+        };
+        ___LinkPhase_ArgoTests = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_Runes_via_ArgoTests, _LinkFileRef_Curry_via_ArgoTests, _LinkFileRef_Argo_via_ArgoTests);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_Runes_via_ArgoTests = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_Runes;
+        };
+        _LinkFileRef_Curry_via_ArgoTests = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_Curry;
+        };
+        _LinkFileRef_Argo_via_ArgoTests = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_Argo;
+        };
+        _______Confs_ArgoTests = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_ArgoTests, _ReleaseConf_ArgoTests);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_ArgoTests = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Argo.xcodeproj/ArgoTests_Info.plist'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited)'; SWIFT_VERSION = '3.0'; };
+            name = Debug;
+        };
+        _ReleaseConf_ArgoTests = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'Argo.xcodeproj/ArgoTests_Info.plist'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited)'; SWIFT_VERSION = '3.0'; };
+            name = Release;
+        };
+        __Dependency_ArgoTests = {
+            isa = PBXTargetDependency;
+            target = ______Target_ArgoTests;
+        };
+        '__PBXFileRef_Argo.xcodeproj/Configs/Project.xcconfig' = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.xcconfig;
+            path = 'Argo.xcodeproj/Configs/Project.xcconfig';
+            sourceTree = '<group>';
+        };
+        _____Configs_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_Argo.xcodeproj/Configs/Project.xcconfig');
+            name = Configs;
+            sourceTree = '<group>';
+        };
+        _____Sources_ = {
+            isa = PBXGroup;
+            children = (_______Group_Runes, _______Group_Curry, _______Group_Argo);
+            name = Sources;
+            sourceTree = '<group>';
+        };
+        Dependencies_ = {
+            isa = PBXGroup;
+            children = (_______Group_Runes, _______Group_Curry);
+            name = Dependencies;
+            sourceTree = '<group>';
+        };
+        _______Tests_ = {
+            isa = PBXGroup;
+            children = (_______Group_ArgoTests);
+            name = Tests;
+            sourceTree = '<group>';
+        };
+       TestProducts_ = {
+            isa = PBXGroup;
+            children = (_____Product_ArgoTests);
+            name = Tests;
+            sourceTree = '<group>';
+        };
+        ____Products_ = {
+            isa = PBXGroup;
+            children = (TestProducts_, _____Product_Runes, _____Product_Curry, _____Product_Argo);
+            name = Products;
+            sourceTree = '<group>';
+        };
+        _______Debug_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_Argo.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Debug;
+        };
+        _____Release_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_Argo.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Release;
+        };
+        ___RootConfs_ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (_______Debug_, _____Release_);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+    };
+}
